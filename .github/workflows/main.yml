@@ -24,14 +24,14 @@ jobs:
           source: "."
           target: "/var/www/html"
 
-      - name: Restart Nginx
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ubuntu
-          key: ${{ secrets.EC2_KEY }}
-          script: |
-            sudo systemctl reload nginx
+     # - name: Restart Nginx
+      #  uses: appleboy/ssh-action@v1.0.3
+       # with:
+        #  host: ${{ secrets.EC2_HOST }}
+         # username: ubuntu
+          #key: ${{ secrets.EC2_KEY }}
+          #script: |
+           # sudo systemctl reload nginx
         
       #- name: Configure AWS Credentials
        # uses: aws-actions/configure-aws-credentials@v4
