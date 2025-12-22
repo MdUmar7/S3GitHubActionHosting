@@ -1,10 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My S3 Static Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy New Year 🎉</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        270deg,
+        #ff0080,
+        #7928ca,
+        #2afadf,
+        #fcb045,
+        #ff512f
+      );
+      background-size: 1000% 1000%;
+      animation: gradientBG 12s ease infinite;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px #fff;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff; }
+      to { text-shadow: 0 0 30px #ffdd00; }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffeb3b;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: linear-gradient(45deg, #ff512f, #dd2476);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff512f;
+    }
+
+    /* Fireworks dots */
+    .firework {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      animation: firework 2s infinite ease-out;
+    }
+
+    @keyframes firework {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(6);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>🚀 Deployed using GitHub Actions</h1>
-  <p>Hello from AWS S3</p>
-</body>
-</html>
+
+  <div class="container">
+    <h1>🎉 Happy New Year 2025 🎉</h1>
+    <h2>Welcome New Beginnings</h2>
+    <p>
+      May this year bring you happiness, success,<br/>
+      health and endless opportunities ✨
+    </p>
+    <a class="btn" href="#">Celebrate 🎆</a>
+  </div>
+
+  <!-- Fireworks -->
+  <div class="firework" style="top:20%; left:30%;"></div>
+  <div class="firework" style
