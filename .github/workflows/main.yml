@@ -39,6 +39,13 @@ jobs:
       run: |
         ls -l ~/.ssh
         ssh -vvv -i ~/.ssh/github_runner ubuntu@${{ secrets.WEB_SERVER_IP }}
+    - name: Debug SSH
+      run: |
+        echo "KEY FILE:"
+        ls -l ~/.ssh/github_runner
+        echo "TEST SSH"
+        ssh -vvv -i ~/.ssh/github_runner ubuntu@${{ secrets.WEB_SERVER_IP }} exit
+
 
 ###########################################
 #name: Deploy Static Website to S3
