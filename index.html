@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy New Year 2026 🎉</title>
+    <meta charset="UTF-8">
+    <title>🎉 Happy New Year 2026 🎉</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", Arial, sans-serif;
-    }
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(270deg, #ff0080, #7928ca, #2afadf, #00ff87);
+            background-size: 800% 800%;
+            animation: gradientBG 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
 
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(
-        270deg,
-        #ff0080,
-        #7928ca,
-        #2afadf,
-        #fcb045,
-        #ff512f
-      );
-      background-size: 1000% 1000%;
-      animation: gradientBG 12s ease infinite;
-      overflow: hidden;
-      color: #fff;
-    }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+        .container {
+            background: rgba(0,0,0,0.35);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            max-width: 600px;
+            width: 90%;
+        }
 
-    .container {
-      text-align: center;
-      padding: 40px;
-      background: rgba(0, 0, 0, 0.35);
-      border-radius: 20px;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-      animation: fadeIn 2s ease;
-    }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
 
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 20px #fff;
-      animation: glow 1.5s infinite alternate;
-    }
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #fff; }
-      to { text-shadow: 0 0 30px #ffdd00; }
-    }
+        .time-box {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 15px;
+            width: 100px;
+        }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ffeb3b;
-    }
+        .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ffea;
+        }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-    }
+        .label {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      font-size: 1.1rem;
-      color: #fff;
-      background: linear-gradient(45deg, #ff512f, #dd2476);
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+        .footer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
 
-    .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #ff512f;
-    }
+        .celebrate {
+            display: none;
+            font-size: 2.5rem;
+            color: #00ff87;
+            animation: pop 1.2s infinite;
+        }
 
-    /* Fireworks dots */
-    .firework {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: white;
-      border-radius: 50%;
-      animation: firework 2s infinite ease-out;
-    }
-
-    @keyframes firework {
-      0% {
-        transform: scale(0);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(6);
-        opacity: 0;
-      }
-    }
-  </style>
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="container">
-    <h1>🎉 Happy New Year 2026 🎉</h1>
-    <h2>Welcome New Beginnings</h2>
-    <p>
-      May this year bring you happiness, success,<br/>
-      health and endless opportunities ✨
-    </p>
-    <a class="btn" href="#">Celebrate 🎆</a>
-  </div>
+<div class="container">
+    <h1>🎆 Happy New Year 🎆</h1>
+    <h2 id="year">2026</h2>
 
-  <!-- Fireworks -->
-  <div class="firework" style="top:20%; left:30%;"></div>
-  <div class="firework" style
+    <div class="countdown" id="countdown">
+        <div class="time-box">
+            <div class="number" id="days">00</div>
+            <div class="label">DAYS</div>
+        </div>
+        <div class="time-box">
+            <div class="number" id="hours">00</div>
+            <div class="label">HOURS</div>
+        </div>
+        <div class="time-box">
+            <div class="number" id="minutes">00</div>
+            <div class="label">MINUTES</div>
+        </div>
+        <div class="time-box">
+            <div class="number" id="seconds">00</div>
+            <div class="label">SECONDS</div>
+        </div>
+    </div>
+
+    <div class="celebrate" id="celebrate">
+        🎉🎉 HAPPY NEW YEAR 2026 🎉🎉
+    </div>
+
+    <div class="footer">
+        Deployed using GitHub Actions 🚀
+    </div>
+</div>
+
+<script>
+    const targetDate = new Date("January 1, 2026 00:00:00").getTime();
+
+    const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").style.display = "none";
+            document.getElementById("celebrate").style.display = "block";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+</script>
+
+</body>
+</html>
