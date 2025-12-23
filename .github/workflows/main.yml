@@ -35,6 +35,11 @@ jobs:
     - name: Verify deployment
       run: |
         curl -s http://${{ secrets.WEB_SERVER_IP }} | head -n 10
+    - name: Debug SSH
+      run: |
+        ls -l ~/.ssh
+        ssh -vvv -i ~/.ssh/github_runner ubuntu@${{ secrets.WEB_SERVER_IP }}
+
 ###########################################
 #name: Deploy Static Website to S3
 
